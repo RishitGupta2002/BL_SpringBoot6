@@ -1,7 +1,10 @@
 package com.example.AddressBookSpring.controller;
 
+
+
 import com.example.AddressBookSpring.dto.ContactDTO;
 import com.example.AddressBookSpring.service.ContactService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +17,7 @@ public class ContactController {
 
     private final ContactService service;
 
+    @Autowired
     public ContactController(ContactService service) {
         this.service = service;
     }
