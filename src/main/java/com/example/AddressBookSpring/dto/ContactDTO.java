@@ -1,5 +1,7 @@
 package com.example.AddressBookSpring.dto;
 
+
+
 import lombok.*;
 
 @Getter
@@ -7,6 +9,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ContactDTO {
+
+    private Long id;
     private String name;
     private String phone;
+
+
 }

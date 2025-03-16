@@ -1,7 +1,5 @@
 package com.example.AddressBookSpring.service;
 
-
-
 import com.example.AddressBookSpring.dto.ContactDTO;
 import com.example.AddressBookSpring.model.Contact;
 import com.example.AddressBookSpring.repository.ContactRepository;
@@ -24,7 +22,7 @@ public class ContactService {
 
     // Convert Contact Entity to DTO
     private ContactDTO convertToDTO(Contact contact) {
-        return new ContactDTO(contact.getName(), contact.getPhone());
+        return new ContactDTO(contact.getId(), contact.getName(), contact.getPhone());
     }
 
     // Convert DTO to Contact Entity
