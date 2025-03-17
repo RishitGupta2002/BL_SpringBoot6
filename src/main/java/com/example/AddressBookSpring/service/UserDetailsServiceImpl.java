@@ -1,6 +1,5 @@
 package com.example.AddressBookSpring.service;
 
-
 import com.example.AddressBookSpring.dto.UserInfoDto;
 import com.example.AddressBookSpring.model.UserInfo;
 import com.example.AddressBookSpring.repository.UserRepository;
@@ -52,7 +51,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             return false;
         }
         String userId = UUID.randomUUID().toString();
-        userRepository.save(new UserInfo(userId, userInfoDto.getUsername(), userInfoDto.getPassword(), new HashSet<>()));
+        userRepository.save(new UserInfo(userId, userInfoDto.getUsername(), userInfoDto.getPassword(),userInfoDto.getEmail(), new HashSet<>()));
 
         return true;
     }
